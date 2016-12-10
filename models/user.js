@@ -11,7 +11,6 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     underscored: true,
     freezeTableName: true,
-    // define the table's name
     tableName: 'users'
   })
 

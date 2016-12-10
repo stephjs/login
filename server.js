@@ -1,5 +1,3 @@
-// Dependencies
-// ============
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -58,30 +56,29 @@ app.use(function(err, req, res, next) {
   });
 });
 
-
 // our module get's exported as app.
 module.exports = app;
 
 
-// Where's the listen? Open up bin/www, and read the comments.
-var debug = require('debug')('express-example');
+// // Where's the listen? Open up bin/www, and read the comments.
+// var debug = require('debug')('express-example');
 
-// we bring in the app we exported from server.js
-//var app = require('../server');
+// // we bring in the app we exported from server.js
+// //var app = require('../server');
 
-// we bring in the models we exported with index.js
-var models = require("./models");
+// // we bring in the models we exported with index.js
+// var models = require("./models");
 
-// we set the port of the app
-app.set('port', process.env.PORT || 3000);
+// // we set the port of the app
+// app.set('port', process.env.PORT || 3000);
 
 
-// we sync the models with our db 
-// (thus creating the apropos tables)
-models.sequelize.sync().then(function () {
-	// set our app to listen to the port we set above
-  var server = app.listen(app.get('port'), function() {
-  	// then save a log of the listening to our debugger.
-    debug('Express server listening on port ' + server.address().port);
-  });
-});
+// // we sync the models with our db 
+// // (thus creating the apropos tables)
+// models.sequelize.sync().then(function () {
+// 	// set our app to listen to the port we set above
+//   var server = app.listen(app.get('port'), function() {
+//   	// then save a log of the listening to our debugger.
+//     debug('Express server listening on port ' + server.address().port);
+//   });
+// });

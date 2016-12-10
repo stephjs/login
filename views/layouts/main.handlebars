@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		<title>Project Manager Login</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+			<p>
+				{{#unless logged_in}}
+					<h2>Not Logged In...</h2>
+					<h3>Please <a href="/users/signin">Sign In</a></h3>
+					<hr>
+					
+					{{!-- <a href="/users/signup">Sign Up</a> --}}
+				{{/unless}}
+
+				{{#if logged_in}}
+					<p>Welcome {{firstname}} {{lastname}}!<br>
+					{{#if adminclearance}}
+				    <a href="/users/adminadd">Add a New User</a><span> | </span>
+				    {{/if}}
+				    <a href="/users/finishsignup">Edit Profile</a><span> | </span>
+					<a href="/users/signout">Sign Out</a></p>
+				{{/if}}
+			</p>
+			</div>
+			{{{ body }}}
+		</div>
+	</body>
+</HTML>

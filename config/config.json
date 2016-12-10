@@ -20,6 +20,6 @@
     "password": "f21568e15f146cecc4944626f800b4ca50963b036376d998ed08308b4254f972",
     "database": "d8s6a621dvoklk",
     "host": "ec2-54-243-185-123.compute-1.amazonaws.com",
-    "port": "5432",
+    "port": "5432"
   }
 }
